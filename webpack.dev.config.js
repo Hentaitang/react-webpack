@@ -6,6 +6,7 @@ const devConfig = {
   /* 入口 */
   entry: {
     app: [
+      'babel-polyfill',
       'react-hot-loader/patch',
       path.join(__dirname, 'src/index.jsx')
     ]
@@ -32,6 +33,7 @@ const devConfig = {
         use: [
           'style-loader', // 将js字符串生成为style节点
           'css-loader', // 将css转化为CommonJS模块
+          'postcss-loader',
           'sass-loader' // 将Sass编译成css
         ]
       }
